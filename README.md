@@ -1,6 +1,4 @@
-# mini-project-tsc-backend-2023
-
-## Tugas JavaScript CRUD & Penjelasan
+# Tugas Mini Project TSC Backend KSM Android
 
 Tugas ini mencakup berbagai konsep JavaScript, termasuk Spread Operator, Destructuring Object/Array, Template Literal, Array Methods, Perulangan, dan Percabangan. Kami akan membuat aplikasi CRUD sederhana untuk mengelola data buku.
 
