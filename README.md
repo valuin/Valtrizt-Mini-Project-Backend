@@ -4,7 +4,7 @@ Tugas ini mencakup berbagai konsep JavaScript, termasuk Spread Operator, Destruc
 
 ## Deskripsi Tugas
 
-Anda akan membuat aplikasi perpustakaan sederhana yang memungkinkan Anda untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada data buku. Anda akan menggunakan Node.js untuk membuat server API, dan data buku akan disimpan dalam file terpisah.
+Anda akan membuat aplikasi sederhana yang memungkinkan Anda untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada data yang ada. Anda akan menggunakan Node.js untuk membuat server API, dan data akan disimpan dalam file terpisah.
 
 ## Langkah-Langkah
 
