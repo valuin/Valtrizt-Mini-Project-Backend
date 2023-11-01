@@ -1,66 +1,93 @@
-# Tugas Mini Project TSC Backend KSM Android
+# Expenses API
 
-Tugas ini mencakup berbagai konsep JavaScript, termasuk Spread Operator, Destructuring Object/Array, Template Literal, Array Methods, Perulangan, dan Percabangan. Kami akan membuat aplikasi CRUD sederhana untuk mengelola data buku.
+This API allows you to manage expenses.
 
-## Deskripsi Tugas
+## Endpoints
 
-Anda akan membuat aplikasi sederhana yang memungkinkan Anda untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada data yang ada. Anda akan menggunakan Node.js untuk membuat server API, dan data akan disimpan dalam file terpisah.
+### GET /expenses ###
 
-## Langkah-Langkah
+Returns a list of all expenses.
 
-1. **Persiapan:**
-   - Pastikan Anda memiliki Node.js terinstal di komputer Anda.
+Response:
 
-2. **Kode JavaScript:**
-   - Buat file JavaScript (`app.js`) yang akan menjadi server API.
-   - Buat file terpisah (`data.js`) untuk menyimpan data sesuai tema kalian dengan beberapa data dummy. Gunakan Spread Operator dan Destructuring Object/Array untuk mengelola data ini.
+```json
+[
+    {
+        "id": 1,
+        "description": "Groceries",
+        "amount": 50,
+        "date": "2022-01-01T00:00:00.000Z"
+    },
+]
 
-3. **Server API:**
-   - Buat server API menggunakan Express.js.
-   - Tambahkan endpoint untuk CRUD operasi, yaitu Tambahkan, Dapatkan Daftar, Edit, dan Hapus.
+```
 
-4. **Array Methods:**
-   - Gunakan Array Methods seperti `push()`, `forEach()`, `splice()`, dll., untuk mengelola data.
+### GET /expenses/average
+Returns a list of expenses grouped by date, with the total and average amount for each date.
 
-5. **Template Literal:**
-   - Gunakan Template Literal untuk menampilkan data di halaman response.
+Response:
+```json
+[
+  {
+    "date": "2022-01-01",
+    "total_amount": 100,
+    "average_amount": 50
+  },
+  // ...
+]
+```
 
-6. **Perulangan dan Percabangan:**
-   - Gunakan perulangan dan percabangan (contoh: `for`, `if`) jika diperlukan dalam backend Anda.
 
-7. **Testing:**
-   - Uji aplikasi Anda dengan menggunakan alat pengujian API seperti Postman atau melalui permintaan HTTP dari aplikasi klien Anda.
+### POST /expenses
+Adds a new expense.
 
-## Contoh Endpoint dan Response
+Request body:
+```json
 
-### Endpoints
+{
+  "description": "Groceries",
+  "amount": 50
+}
 
-1. **Tambahkan Buku**:
-   - Endpoint: `POST /addBook`
-   - Deskripsi: Menambahkan buku baru ke dalam database.
-   - Contoh Permintaan:
-     ```json
-     {
-         "title": "Judul Buku",
-         "author": "Penulis"
-     }
-     ```
+Response:
 
-2. **Dapatkan Daftar Buku**:
-   - Endpoint: `GET /getBooks`
-   - Deskripsi: Mendapatkan daftar semua buku yang ada dalam database.
+{
+  "id": 1,
+  "description": "Groceries",
+  "amount": 50,
+  "date": "2022-01-01T00:00:00.000Z"
+}
+```
 
-3. **Edit Buku**:
-   - Endpoint: `PUT /editBook/:index`
-   - Deskripsi: Mengedit buku berdasarkan indeks (index) di database.
-   - Contoh Permintaan:
-     ```json
-     {
-         "title": "Judul Baru",
-         "author": "Penulis Baru"
-     }
-     ```
 
-4. **Hapus Buku**:
-   - Endpoint: `DELETE /deleteBook/:index`
-   - Deskripsi: Menghapus buku berdasarkan indeks (index) dari database.
+
+### PUT /expenses/:id
+Updates an existing expense.
+
+Request body:
+```json
+
+{
+  "description": "Groceries",
+  "amount": 50
+}
+
+Response:
+{
+  "id": 1,
+  "description": "Groceries",
+  "amount": 50,
+  "date": "2022-01-01T00:00:00.000Z"
+}
+```
+
+### DELETE /expenses/:id
+Deletes an existing expense.
+
+Response:
+
+```json
+{
+  "id": 1
+}
+```
