@@ -1,3 +1,80 @@
+# Expense Tracker CLI
+
+This is a command-line interface (CLI) application for tracking expenses. It interacts with an API to fetch, add, update, and delete expenses.
+
+## Installation
+
+Before running the application, make sure you have Node.js and npm installed. Then, install the required dependencies:
+
+```bash
+npm install
+```
+
+## Usage
+
+Create a local MySQL database first
+
+```bash
+CREATE DATABASE expenses;
+USE expenses;
+
+CREATE TABLE expenses (
+  id INT NOT NULL AUTO_INCREMENT,
+  description VARCHAR(255) NOT NULL,
+  amount INT NOT NULL,
+  PRIMARY KEY (id)
+);
+
+```
+change the password section in server.js to your mysql password
+
+```bash
+// Create a MySQL connection pool
+const pool = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: 'valvinna2908',
+  database: 'expenses'
+});
+```
+Run the application with the following command:
+```bash
+node server.js // to run the localhost
+node client.js //
+```
+The application will present a menu with the following options:
+
+Get all expenses
+Get average expenses
+Add an expense
+Update an expense
+Delete an expense
+
+# Functions
+
+## getExpenses()
+This function fetches all expenses from the API and logs them to the console. Each expense is logged with its ID, description, amount, and date.
+
+## getAverageExpenses()
+This function fetches the average expenses from the API and logs them to the console. The averages are calculated by the API.
+
+## addExpense()
+
+This function adds a new expense to the database.
+
+## updateExpense()
+
+This function updates an existing expense in the database.
+
+## deleteExpense()
+
+This function deletes an existing expense from the database.
+
+# Dependencies
+prompt-sync: Used to synchronously get user input in the console.
+node-fetch: Used to make HTTP requests to the API.
+
+
 # Expenses API
 
 This API allows you to manage expenses.
@@ -36,6 +113,8 @@ Response:
   // ...
 ]
 ```
+
+
 
 
 ### POST /expenses
