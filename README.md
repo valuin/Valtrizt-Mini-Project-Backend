@@ -33,7 +33,7 @@ change the password section in server.js to your mysql password
 const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
-  password: 'valvinna2908',
+  password: 'passwordplaceholder',
   database: 'expenses'
 });
 ```
