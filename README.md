@@ -71,8 +71,12 @@ This function updates an existing expense in the database.
 This function deletes an existing expense from the database.
 
 # Dependencies
+express: A web application framework for Node.js, used to handle HTTP requests and responses.
+mysql2/promise: A MySQL client for Node.js with Promise support. It's used to connect to the MySQL database and perform queries.
+moment: A JavaScript library for parsing, validating, manipulating, and displaying dates and times. It's used to handle date and time data.
 prompt-sync: Used to synchronously get user input in the console.
 node-fetch: Used to make HTTP requests to the API.
+
 
 
 # Expenses API
