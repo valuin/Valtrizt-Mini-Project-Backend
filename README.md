@@ -39,8 +39,8 @@ const pool = mysql.createPool({
 ```
 Run the application with the following command:
 ```bash
-node server.js // to run the localhost
-node client.js //
+node server.js // to run the localhost server
+node client.js // to run the program
 ```
 The application will present a menu with the following options:
 
