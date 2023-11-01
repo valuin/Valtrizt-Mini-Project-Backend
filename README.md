@@ -103,9 +103,9 @@ Response:
 [
     {
         "id": 1,
-        "description": "Groceries",
-        "amount": 50,
-        "date": "2022-01-01T00:00:00.000Z"
+        "description": "Ayam Goreng",
+        "amount": 50000,
+        "date": "2023-10-31T13:21:14.000Z"
     },
 ]
 
@@ -118,9 +118,9 @@ Response:
 ```json
 [
   {
-    "date": "2022-01-01",
-    "total_amount": 100,
-    "average_amount": 50
+    "date": "2023-10-31",
+    "total_amount": 100000,
+    "average_amount": 50000
   },
   // ...
 ]
@@ -136,17 +136,17 @@ Request body:
 ```json
 
 {
-  "description": "Groceries",
-  "amount": 50
+  "description": "Nasi Uduk",
+  "amount": 15000
 }
 
 Response:
 
 {
   "id": 1,
-  "description": "Groceries",
-  "amount": 50,
-  "date": "2022-01-01T00:00:00.000Z"
+  "description": "Nasi Uduk",
+  "amount": 15000,
+  "date": "2023-10-31T13:21:14.000Z"
 }
 ```
 
@@ -159,16 +159,16 @@ Request body:
 ```json
 
 {
-  "description": "Groceries",
-  "amount": 50
+  "description": "Nasi Uduk",
+  "amount": 12000
 }
 
 Response:
 {
   "id": 1,
-  "description": "Groceries",
-  "amount": 50,
-  "date": "2022-01-01T00:00:00.000Z"
+  "description": "Nasi Uduk",
+  "amount": 12000,
+  "date": "2023-10-31T13:21:14.000Z"
 }
 ```
 
