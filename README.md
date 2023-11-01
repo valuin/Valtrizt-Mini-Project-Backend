@@ -45,9 +45,13 @@ node client.js // to run the program
 The application will present a menu with the following options:
 
 Get all expenses
+
 Get average expenses
+
 Add an expense
+
 Update an expense
+
 Delete an expense
 
 # Functions
